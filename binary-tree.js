@@ -70,16 +70,6 @@ class BinaryTree {
     };
   };
 
-  find(value, node = this.root) {
-    if (node === null || node.value === value) return node;
-
-    if (node.value < value) {
-      return this.find(value, node.rightChild);
-    } else {
-      return this.find(value, node.leftChild);
-    };
-  };
-
   levelOrder(callbackFn) {
     const queue = [this.root];
     const levelOrderList = [];
@@ -151,7 +141,7 @@ class BinaryTree {
   isBalanced() {
     return this.#testBalance(this.root) !== -1;
   };
-  
+
   rebalance() {
     const inorderList = this.inorder();
     this.root = this.buildTree(inorderList);
