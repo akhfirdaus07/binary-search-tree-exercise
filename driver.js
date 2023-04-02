@@ -1,2 +1,2 @@
-// const BinaryTree = require("./binary-tree")
+const BinaryTree = require("./binary-tree")
 
